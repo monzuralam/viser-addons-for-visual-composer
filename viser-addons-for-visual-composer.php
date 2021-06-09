@@ -38,6 +38,7 @@ class VCExtendVISERAddons {
         */
 
         require_once('modules/banner.php');
+        require_once('modules/dual-heading.php');
         
     }
 

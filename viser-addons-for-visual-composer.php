@@ -39,6 +39,7 @@ class VCExtendVISERAddons {
 
         require_once('modules/banner.php');
         require_once('modules/dual-heading.php');
+        require_once('modules/dual-button.php');
         
     }
 

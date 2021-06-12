@@ -57,6 +57,42 @@
                 "group" 		=> 'Button 1',
                 "description" => __("Select Background Color for Button 1.", 'viser-addons-for-visual-composer')
             ),
+            array(
+                "type" => "textfield",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Button 2", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_2_title",
+                "group" 		=> 'Button 2',
+                "description" => __("Give a title to for Second Button", 'viser-addons-for-visual-composer')
+            ),
+            array(
+                "type" => "vc_link",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Link", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_2_url",
+                "group" 		=> 'Button 2',
+                "description" => __("Add a custom link or select existing page.", 'viser-addons-for-visual-composer')
+            ),
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Color", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_2_color",
+                "group" 		=> 'Button 2',
+                "description" => __("Select Color for Button 2.", 'viser-addons-for-visual-composer')
+            ),
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Background Color", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_2_bgcolor",
+                "group" 		=> 'Button 2',
+                "description" => __("Select Background Color for Button 2.", 'viser-addons-for-visual-composer')
+            ),
   
               
         )

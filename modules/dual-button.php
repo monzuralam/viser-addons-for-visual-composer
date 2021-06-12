@@ -21,6 +21,24 @@
                 "group" 		=> 'General',
                 "description" => __("Default Button Alignment Center", "viser-addons-for-visual-composer"),
             ),
+            array(
+                "type" => "textfield",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Button 1", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_1_title",
+                "group" 		=> 'Button 1',
+                "description" => __("Give a title to for first Button", 'viser-addons-for-visual-composer')
+            ),
+            array(
+                "type" => "vc_link",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Link", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_1_url",
+                "group" 		=> 'Button 1',
+                "description" => __("Add a custom link or select existing page.", 'viser-addons-for-visual-composer')
+            ),
   
               
         )

@@ -39,6 +39,24 @@
                 "group" 		=> 'Button 1',
                 "description" => __("Add a custom link or select existing page.", 'viser-addons-for-visual-composer')
             ),
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Color", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_1_color",
+                "group" 		=> 'Button 1',
+                "description" => __("Select Color for Button 1.", 'viser-addons-for-visual-composer')
+            ),
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Background Color", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_1_bgcolor",
+                "group" 		=> 'Button 1',
+                "description" => __("Select Background Color for Button 1.", 'viser-addons-for-visual-composer')
+            ),
   
               
         )

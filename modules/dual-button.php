@@ -93,7 +93,14 @@
                 "group" 		=> 'Button 2',
                 "description" => __("Select Background Color for Button 2.", 'viser-addons-for-visual-composer')
             ),
-  
+            array(
+                "type" => "css_editor",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Background Color", 'viser-addons-for-visual-composer'),
+                "param_name" => "dual_btn_css",
+                "group" => 'Design',
+            ),
               
         )
 

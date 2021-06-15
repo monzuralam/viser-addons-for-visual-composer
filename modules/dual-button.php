@@ -105,15 +105,34 @@
         )
 
     ) );
-
+ 
 
     function viser_dual_button( $atts, $content = null ) {
       extract( shortcode_atts( array(
+        'dual_btn_align'=>'text-center',
+        'dual_btn_1_title'=>'LOREM IPSUM',
+        'dual_btn_1_url'=>'#',
+        'dual_btn_1_color'=>'#000',
+        'dual_btn_1_bgcolor'=>'transparent',
+        'dual_btn_2_title'=>'DOLLER SIT',
+        'dual_btn_2_url'=>'#',
+        'dual_btn_2_color'=>'#000',
+        'dual_btn_2_bgcolor'=>'transparent',
+        'dual_btn_css'=>'',
         ''=>'',
       ), $atts ) );
       ob_start();
+      $dual_btn_style_css = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class($dual_btn_css, ' '), "dual_btn", $atts );
+      $dual_btn_style_css = esc_attr($dual_btn_style_css);
       ?>
-
+        <div class="viser-dual-btn-section <?php echo $dual_btn_align ?>">
+            <div class="viser-dual-btn-wrapper" style="background-color:<?php echo $dual_btn_1_bgcolor; ?>">
+                <a href="<?php echo $dual_btn_1_url; ?>" class="viser-dual-btn " style="color:<?php echo $dual_btn_1_color; ?>;"><span><?php echo $dual_btn_1_title; ?></span></a>
+            </div>
+            <div class="viser-dual-btn-wrapper" style="background-color:<?php echo $dual_btn_2_bgcolor; ?>">
+                <a href="<?php echo $dual_btn_2_url; ?>" class="viser-dual-btn " style="color:<?php echo $dual_btn_2_color; ?>"><span><?php echo $dual_btn_2_title; ?></span></a>
+            </div>
+        </div>
       <?php
       return ob_get_clean();
     }

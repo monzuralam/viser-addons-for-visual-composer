@@ -70,9 +70,25 @@ function viser_posts_grid( $atts, $content = null ) {
     ));
     if($q->have_posts()):
         while($q->have_posts()):$q->the_post();
-    ?>
-        <h3><?php the_title(); ?></h3>        
-    <?php
+            ?>
+                <div class="vc_col-lg-4 vc_col-md-4 vc_col-xs-12">
+                    <article class="">
+                        <div class="posts-grid">
+                            <div class="posts-grid-thumbnail">
+                                <a href="<?php the_permalink( ); ?>">
+                                    <div class="featured-img-blog">
+                                        <?php the_post_thumbnail( 'full', array('class'=>'') ); ?>
+                                    </div>
+                                </a>
+                                <div class="post-categories">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </article>
+                </div>      
+            <?php
         endwhile;
     endif;
     return ob_get_clean();

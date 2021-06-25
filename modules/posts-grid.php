@@ -59,12 +59,22 @@
 
 function viser_posts_grid( $atts, $content = null ) {
     extract( shortcode_atts( array(
-        ''=>'',
+        'posts_grid_number'=>'-1',
+        'posts_grid_column'=>'',
+        'posts_grid_title_tag'=>'',
     ), $atts ) );
     ob_start();
+    $q = new WP_Query(array(
+        'posts_type'    =>  'posts',
+        'posts_per_page'    => $post_grid_number,
+    ));
+    if($q->have_posts()):
+        while($q->have_posts()):$q->the_post();
     ?>
-
+        <h3><?php the_title(); ?></h3>        
     <?php
+        endwhile;
+    endif;
     return ob_get_clean();
 }
 add_shortcode( 'postsgrid', 'viser_posts_grid'  );

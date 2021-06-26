@@ -60,8 +60,8 @@
 function viser_posts_grid( $atts, $content = null ) {
     extract( shortcode_atts( array(
         'posts_grid_number'=>'-1',
-        'posts_grid_column'=>'',
-        'posts_grid_title_tag'=>'',
+        'posts_grid_column'=>'vc_col-md-4',
+        'posts_grid_title_tag'=>'h3',
     ), $atts ) );
     ob_start();
     $q = new WP_Query(array(
@@ -71,7 +71,7 @@ function viser_posts_grid( $atts, $content = null ) {
     if($q->have_posts()):
         while($q->have_posts()):$q->the_post();
             ?>
-                <div class="vc_col-lg-4 vc_col-md-4 vc_col-xs-12">
+                <div class="<?php echo $posts_grid_column; ?> vc_col-xs-12">
                     <article>
                         <div class="posts-grid">
                             <div class="posts-grid-thumbnail">
@@ -97,9 +97,9 @@ function viser_posts_grid( $atts, $content = null ) {
                                         <a href=""><?php echo get_the_author(); ?></a>
                                     </span>
                                 </div>
-                                <h3 class="post-name">
+                                <<?php echo $posts_grid_title_tag; ?> class="post-name">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h3>
+                                </<?php echo $posts_grid_title_tag; ?>>
                                 <div class="post-excerpt">
                                     <?php the_excerpt(  ); ?>
                                 </div>

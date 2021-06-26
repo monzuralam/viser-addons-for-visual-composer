@@ -72,19 +72,38 @@ function viser_posts_grid( $atts, $content = null ) {
         while($q->have_posts()):$q->the_post();
             ?>
                 <div class="vc_col-lg-4 vc_col-md-4 vc_col-xs-12">
-                    <article class="">
+                    <article>
                         <div class="posts-grid">
                             <div class="posts-grid-thumbnail">
                                 <a href="<?php the_permalink( ); ?>">
                                     <div class="featured-img-blog">
                                         <?php the_post_thumbnail( 'full', array('class'=>'') ); ?>
+                                        <div class="flex-icon">
+                                            <div class="flex-icon-inside">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="post-categories">
                                     
                                 </div>
                             </div>
-                            
+                            <div class="post-details">
+                                <div class="post-category-comment-date">                             
+                                    <span class="post-date"><i class="fa fa-clock-o"></i> <?php echo get_the_date('F j, Y'); ?></span>
+                                    <span class="post-author">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <a href=""><?php echo get_the_author(); ?></a>
+                                    </span>
+                                </div>
+                                <h3 class="post-name">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                                <div class="post-excerpt">
+                                    <?php the_excerpt(  ); ?>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>      

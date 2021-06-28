@@ -49,7 +49,23 @@
                 "group" 		=> 'General',
                 "description" => __("Default is H3", "viser-addons-for-visual-composer"),
             ),
-
+            array(
+                "type" => "iconpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => __("Hover icon", 'viser-addons-for-visual-composer'),
+                "param_name" => "posts_grid_icon",
+                'value'=>     'fas fa-link',
+                "group" 		=> 'General',
+                'settings' => array(
+                    'emptyIcon' => true, // default true, display an "EMPTY"
+                    'iconsPerPage' => 200, // default 100, how many icons
+                ),
+                'dependency' => array(
+                    'element' => 'type',
+                    'value' => 'fontawesome',
+                ),
+            ),
             
             
         )
